@@ -51,9 +51,9 @@ namespace PasswordManager.Pages
                 var connectionStrings = config.ConnectionStrings;
                 connectionStrings.ConnectionStrings["defaultConnection"].ConnectionString = dialog.FileName;
                 config.Save(ConfigurationSaveMode.Modified);
+                Manager.MainFrame.Navigate(new EnterPasswordPage());
             }
 
-            Manager.MainFrame.Navigate(new EnterPasswordPage());
         }
 
         private void Exit_OnClick(object sender, RoutedEventArgs e)
